@@ -13,9 +13,9 @@ path_list=[]
 def project_zip():
     os.chdir(watch_folder)
     #check the watch folder for .DS files, if exists, remove it. this is so the script does not create and XML from the .DS
-    if os.path.isfile(os.path.join(watch_folder,'.DS_Store')): 
+    if os.path.isfile(os.path.join(watch_folder,'.DS_Store')):
         os.remove('.DS_Store')
-        
+
     #get a list of all the folder names under the given path.
     dir_list =[name for name in os.listdir(watch_folder)
         if os.path.isdir(os.path.join(watch_folder, name))]
@@ -25,11 +25,11 @@ def project_zip():
 
     #loop through directory list, check the len of the file path, if its < 260, archive and move
     for project_folder in dir_list:
-        full_path = os.path.join(watch_folder, project_folder) 
+        full_path = os.path.join(watch_folder, project_folder)
         len_Lists[count].append(project_folder)
         for root, dirs, files in os.walk(full_path):
             len_Lists[count].append(len(root))
-            for file in files: 
+            for file in files:
                 file_path = os.path.join(root,file)
                 len_Lists[count].append(len(file_path))
         count = count + 1
@@ -49,14 +49,14 @@ def project_zip():
                 xml_name = open(z + '.xml','a')
                 xml_name.write(
                     "<?xml version=\"1.0\" encoding=\"utf-8\"?>" + "\n" +
-                        "<project>" + "\n" + 
+                        "<project>" + "\n" +
                             "<ProjectName>" + z + "</ProjectName>" + "\n" +
                             "<ProjectPath>"+ y + "</ProjectPath>" + "\n" +
                         "</project>" + "\n"
                     )
                 xml_name.close()
                 os.chmod(y + '.xml', 0o777)
-            else: 
+            else:
                 continue
     exit()
 

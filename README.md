@@ -1,14 +1,14 @@
 
-## XML Creation for a Vantage Workflow
+## XML Creation based on Directory Name and Path
 
-A Python script to create simple XML for use in Telestream Vantage workflows. 
+A Python script to create a simple XML for use in Telestream Vantage workflows. 
 
 
 ## Project Description
 
-This Python script was created out the need to automate the archiving of video projects and associated .WAV files through a Telestream Vantage Workflow.    
+This Python script was created out the need to automate the archiving of video projects and associated audio files.   
 
-The script generates an XML document for each individual sub-directory in a given 'watch folder'. The XML contains two elements `<ProjectName>` and `<ProjectPath>`. The creation of the XML file triggers the start of the Vantage workflow. The two elements from the XML are used to generate variables for the Vantage workflow:  `<ProjectName>` translates to the `Project Name` variable, and `<ProjectPath>` translates to the `Project Path - text` variable. The Vantage workflow
+The script generates an XML document for each individual sub-directory in a given 'watch folder'. The XML contains two elements `<ProjectName>` and `<ProjectPath>`. The creation of the XML file triggers the start of the Vantage workflow. The two elements from the XML are used to generate variables inside the Vantage workflow:  `<ProjectName>` translates to the `Project Name` text variable, and `<ProjectPath>` translates to the `Project Path - text` variable. The Vantage workflow uses this information to archive the entire contents of Project at the given path. 
 
 
 The Vantage workflow and video encoding software 
@@ -18,8 +18,8 @@ The Vantage workflows are file-based, a directory cannot trigger a workflow.
 ## Prerequisites
 
 * Windows Server OS (http://www.telestream.net/vantage/tech-specs.htm) 
-* Python 2.7 or 3.5  (https://www.python.org/downloads/)
-* Telestream Vantage 6.3 or above (http://www.telestream.net/vantage/overview.htm)
+* Python 2.7 or later (https://www.python.org/downloads/)
+* Telestream Vantage 6.3 or later (http://www.telestream.net/vantage/overview.htm)
 
 
 ## Files Included
@@ -29,6 +29,8 @@ __Vantage_XML_Creation.py__ - The python script for generating the XML.
 __Vantage_XSLT_Transform.xml__ - XSLT used to transform the generic XML from the python script to a 'style sheet' used inside the Vantage Workflow. 
 
 __Vantage_ZIP_Workflow.xml__ - The Vantage workflow that accepts the XML created by the Python script. 
+
+__MOVE_Project.bat__ - simple batch script that is called at teh end of the Zip workflow. It moves the unzipped archive into its file location. 
 
 
 ## Getting Started

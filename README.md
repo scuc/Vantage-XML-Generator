@@ -41,9 +41,11 @@ After the prerequisites are downloaded and installed.
  * `output_dir01`
  * `output_dir02`
 
- 2. 
+ 2. Add Python script to the Windows Task Scheduler, and set it run on a given interval. 
 
-Execute commands: 
+ 3. Import the Zip Workflow and XSLT Transform XML files into Vantage. 
+
+## Execute commands: 
 
 1. 
 2. 
@@ -52,7 +54,7 @@ Execute commands:
 5. 
 6. 
 
-##Vantage Workflow Actions
+## Vantage Workflow Actions
 
 1. `Watch`
 2. `Transform`

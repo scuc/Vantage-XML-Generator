@@ -6,7 +6,7 @@ A Python script to create a simple XML for use in Telestream Vantage workflows.
 
 ## Project Description
 
-Vantage, by Telestream, is a Windows-based solution for deigning and managing fully automated media workflows. Project archving is a typical workflow that occurs at the end of media pipeline. The media archives are created by placing a collection of files and/or project folders into a container (.ZIP, .dmg, .iso, etc) The problem with using Vantage for this task is that it's workflows are file-based, a project directory cannot trigger a Vantage workflow. 
+Vantage, by Telestream, is a Windows-based solution for designing and managing fully automated media workflows. Project archving is a typical workflow that occurs at the end of media pipeline. The media archives are created by placing a collection of files and/or project folders into a container (.ZIP, .dmg, .iso, etc) The problem with using Vantage for this task is that it's workflows are file-based, a project directory cannot trigger a Vantage workflow. 
 
 This Python script was created out the need to automate the archiving of media projects from within a Vantage workflow. These projects exist in the filesystem as a directory with any number of sub-directories and files. In order to place
 the project into a Vantage watch-folder and trigger a workflow, the Python script must first generate some type of associated file and metadata. 

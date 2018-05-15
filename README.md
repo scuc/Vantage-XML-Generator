@@ -27,7 +27,7 @@ __Vantage_XML_Creation.py__ - The python script for generating the XML.
 
 __Vantage_XSLT_Transform.xml__ - XSLT used to transform the generic XML from the python script to a 'style sheet' used inside the Vantage Workflow. 
 
-__Vantage_ZIP_Workflow.xml__ - The Vantage workflow that accepts the XML created by the Python script. 
+__Vantage_Project_Archive_Workflow.xml__ - The Vantage workflow that accepts the XML created by the Python script. 
 
 __MOVE_Project.bat__ - simple batch script that is called at teh end of the Zip workflow. It moves the unzipped archive into its file location. 
 

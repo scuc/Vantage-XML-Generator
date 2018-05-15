@@ -29,8 +29,6 @@ __Vantage_XSLT_Transform.xml__ - XSLT used to transform the generic XML from the
 
 __Vantage_Project_Archive_Workflow.xml__ - The Vantage workflow that accepts the XML created by the Python script. 
 
-__MOVE_Project.bat__ - simple batch script that is called at teh end of the Zip workflow. It moves the unzipped archive into its file location. 
-
 
 ## Getting Started
 
@@ -44,15 +42,6 @@ After the prerequisites are downloaded and installed.
  2. Add Python script to the Windows Task Scheduler, and set it run on a given interval. 
 
  3. Import the Zip Workflow and XSLT Transform XML files into Vantage. 
-
-## Execute commands: 
-
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
 
 ## Vantage Workflow Actions
 

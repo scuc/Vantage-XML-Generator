@@ -6,12 +6,12 @@ A Python script to create a simple XML for use in Telestream Vantage workflows.
 
 ## Project Description
 
-Vantage, by Telestream, is a Windows-based solution for media transcoding and workflow creation. As part of automating the media pipeline, there is a need to automate the archiving of projects and associated files by placing the collective files into a container (.ZIP, .dmg, ,iso, etc) The problem with using Vantage for this task - it's workflows are file-based, a directory cannot trigger a Vantage workflow. 
+Vantage, by Telestream, is a Windows-based solution for media transcoding and workflow creation. As part of automating media pipelines, there is a need to archive projects by placing the collection of files into a container (.ZIP, .dmg, .iso, etc) The problem with using Vantage for this task - it's workflows are file-based, a project directory cannot trigger a Vantage workflow. 
 
-This Python script was created out the need to automate the archiving of media projects from within a Vantage workflow. These projects exist in the filesystem as a directory with a given number of sub-directories an files. In order to place
-the project into a Vantage watch-folder and trigger a workflow, the Python script must first generate some type of associated file with metadata. 
+This Python script was created out the need to automate the archiving of media projects from within a Vantage workflow. These projects exist in the filesystem as a directory with any number of sub-directories and files. In order to place
+the project into a Vantage watch-folder and trigger a workflow, the Python script must first generate some type of associated file and metadata. 
 
-The Python script generates an XML document for each project directory in a given 'watch folder'. The XML contains two elements `<ProjectName>` and `<ProjectPath>`. The creation of the XML file triggers the start of the Vantage workflow. The two elements from the XML are used to generate variables inside the Vantage workflow:  `<ProjectName>` translates to the `Project Name` text variable, and `<ProjectPath>` translates to the `Project Path` - text variable. The Vantage workflow uses this information to archive the entire contents of Project at the given path. 
+The Python script generates an XML document for each project directory in a given 'watch folder'. The XML contains two elements `<ProjectName>` and `<ProjectPath>`. The creation of the XML file by the Python script triggers the start of the Vantage workflow. The two elements from the XML are used to generate variables inside the Vantage workflow:  `<ProjectName>` translates to the `Project Name` text variable, and `<ProjectPath>` translates to the `Project Path` - path variable. The Vantage workflow uses this information to archive the entire contents of Project at the given path. 
 
 
 ## Prerequisites

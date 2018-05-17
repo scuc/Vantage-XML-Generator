@@ -39,11 +39,11 @@ entire contents of Project at the given path.
 
 **``Vantage_XML_Creation.py``** - The python script for generating the XML.
 
-**``Vantage_XSLT_Transform.xml``** - XSLT used to transform the generic XML from the 
-python script to a 'style sheet' used inside the Vantage Workflow.
+**``Vantage_XSLT_Transform.xml``** - XSLT used to transform the generic XML from
+the python script to a 'style sheet' used inside the Vantage Workflow.
 
-**``Vantage_Project_Archive_Workflow.xml``** - The Vantage workflow that accepts the 
-XML created by the Python script.
+**``Vantage_Project_Archive_Workflow.xml``** - The Vantage workflow that accepts
+the XML created by the Python script.
 
 ## Getting Started
 
